@@ -1,0 +1,119 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+@font-face { 
+    font-family: 'HelloSoffie'; 
+    src: url('fonts/HelloSoffie.ttf'); 
+} 
+@font-face { 
+    font-family: 'Felidae'; 
+    src: url('fonts/Felidae.ttf'); 
+} 
+
+/* Мобильные устройства */
+@media (max-width: 600px) {
+    /* Ваши стили для мобильных устройств */
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid red;
+        gap: 100px;
+        height: 700px;
+    }
+    
+    h1 { 
+        padding-top: 250px;
+        font-family: 'HelloSoffie'; 
+        font-size: 70px; 
+        font-weight: 400; 
+        text-align: center; 
+        color: white;
+    } 
+    p{
+    
+        font-family: "Felidae";
+        font-size: 34px;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+    }
+    
+    .main-banner { 
+        background-image: url(img/baner.jpeg); 
+        background-repeat: no-repeat; 
+        height: 700px;
+        background-size: cover; 
+    } 
+    .text-date{
+        width: 300px;
+    }
+
+
+
+    .container-invation{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .invation-title{
+        padding-top: 30px;
+        font-family: 'HelloSoffie'; 
+        font-size: 70px; 
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+    .container-invation-text{
+        width: 400px;
+    }
+    .container-invation-text p{
+        font-family: "Felidae";
+        font-size: 35px;
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+    .confirmation p{
+        font-family: "Felidae";
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+   
+}
+
+
+
+
+/* Устройства с шириной до 700px */
+@media (max-width: 700px) {
+    /* Ваши стили для устройств с шириной до 700px */
+}
+
+/* Устройства с шириной до 800px */
+@media (max-width: 800px) {
+    /* Ваши стили для устройств с шириной до 800px */
+}
+
+/* Устройства с шириной до 900px */
+@media (max-width: 900px) {
+    /* Ваши стили для устройств с шириной до 900px */
+}
+
+/* Устройства с шириной до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    /* Ваши стили для планшетов */
+}
+
+/* Устройства с шириной до 1200px (большие планшеты и небольшие ноутбуки) */
+@media (max-width: 1200px) {
+    /* Ваши стили для больших планшетов и небольших ноутбуков */
+}
