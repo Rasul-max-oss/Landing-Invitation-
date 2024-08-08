@@ -1,8 +1,20 @@
+/* Сброс стилей */
 * { 
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-} 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* предотвращаем горизонтальное скроллирование */
+}
+
 @font-face { 
     font-family: 'HelloSoffie'; 
     src: url('fonts/HelloSoffie.ttf'); 
@@ -12,19 +24,20 @@
     src: url('fonts/Felidae.ttf'); 
 } 
 
-/* Мобильные устройства */
+
+/* Стили для мобильных устройств */
 @media (max-width: 600px) {
-    /* Ваши стили для мобильных устройств */
     .container{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        border: 1px solid red;
         gap: 100px;
-        height: 700px;
+        height: 100vh;
     }
-    
+    .wrapper-time{
+        max-width:500px;
+    }
     h1 { 
         padding-top: 250px;
         font-family: 'HelloSoffie'; 
@@ -33,34 +46,39 @@
         text-align: center; 
         color: white;
     } 
+
     p{
-    
         font-family: "Felidae";
         font-size: 34px;
         font-weight: 400;
         text-align: center;
         color: #fff;
     }
-    
+
+ 
+
     .main-banner { 
-        background-image: url(img/baner.jpeg); 
+        background-image: url('img/baner.jpeg'); 
         background-repeat: no-repeat; 
-        height: 700px;
         background-size: cover; 
-    } 
-    .text-date{
-        width: 300px;
+        height: 95vh;
     }
 
+    .text-date{
 
+        width: 300px;
+    }
 
     .container-invation{
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
     .invation-title{
         padding-top: 30px;
         font-family: 'HelloSoffie'; 
@@ -69,51 +87,660 @@
         text-align: center;
         color: black;
     }
-    .container-invation-text{
-        width: 400px;
+
+    .container-invitation-text{
+        width: 90%; /* Убедимся, что ширина адаптивна */
+        
     }
+
     .container-invation-text p{
         font-family: "Felidae";
-        font-size: 35px;
+         font-size: 22px;
         font-weight: 400;
         text-align: center;
         color: black;
     }
+
     .confirmation p{
+        font-family: "Felidae";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: center;
+        color: black;
+    }
+
+    .location{
+        margin-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .image-container{
+        margin-top: 55px;
+        background-image: url(img/location.jpeg);
+        background-size: cover;
+    
+        background-position:50%;
+        width: 100%;
+        height: 200px;
+    }
+
+    .wrapper-time{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+    }
+   
+    .wrapper-time p {
         font-family: "Felidae";
         font-size: 22px;
         font-weight: 400;
         line-height: 35px;
         text-align: center;
         color: black;
+        
     }
-   
+    .wrapper-time span{
+        font-family: "Felidae";
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+    .wrapper-time{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timing{
+        background-image: url(img/timing.jpeg);
+        height: 200px;
+    }
+
+
+    .container-dresscode-text{
+        width: 400px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .container-dresscode-text p{
+        font-family: "Felidae";
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .wrapper-dresscode{
+        gap: 10px;
+    }
+    .dresscode-title{
+        padding-top: 17px;
+        font-family: "Felidae";
+        font-size: 33px;
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+
+
+    .container-circle {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    .light-blue {
+        background-image: url('img/light-blue.jpeg');
+    }
+    .pink {
+        background-image: url('img/pink.jpeg');
+    }
+    .beige {
+        background-image: url('img/beige.jpeg');
+    }
+    .light-purple {
+        background-image: url('img/light-purple.jpeg');
+    }
+
+    .silver {
+        background-image: url('img/silver.jpeg');
+    }
+    .black {
+        background-image: url('img/black.jpeg');
+    }
+
+    .details{
+        padding-top: 30px;
+    }
+    .container-details{
+        gap: 10px;
+    }
+
+    .wedding-button {
+        margin-top: 15px;
+        display: inline-block;
+        padding: 15px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Felidae";
+        color: #fff;
+        background-color: #f28574; /* Цвет кнопки */
+        border: none;
+        border-radius: 30px; /* Закругленные углы */
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .wedding-button:hover {
+        background-color: #f28574; /* Цвет при наведении */
+        transform: scale(1.05);
+    }
 }
 
 
 
-
-/* Устройства с шириной до 700px */
-@media (max-width: 700px) {
-    /* Ваши стили для устройств с шириной до 700px */
+/* Остальные медиазапросы при необходимости */
+@media (max-width: 376px) {
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* предотвращаем горизонтальное скроллирование */
+    }
+    .main-banner { 
+        background-image: url('img/baner.jpeg'); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        height: 100vh;
+        width: 100%; /* Ставим ширину главного баннера 100% */
+    }
 }
 
-/* Устройства с шириной до 800px */
 @media (max-width: 800px) {
     /* Ваши стили для устройств с шириной до 800px */
 }
 
-/* Устройства с шириной до 900px */
 @media (max-width: 900px) {
     /* Ваши стили для устройств с шириной до 900px */
 }
 
-/* Устройства с шириной до 1024px (планшеты) */
 @media (max-width: 1024px) {
     /* Ваши стили для планшетов */
 }
 
-/* Устройства с шириной до 1200px (большие планшеты и небольшие ноутбуки) */
 @media (max-width: 1200px) {
     /* Ваши стили для больших планшетов и небольших ноутбуков */
+}
+
+/* Стили для планшетов */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 100px;
+        height: 100vh;
+    }
+
+    h1 { 
+        padding-top: 250px;
+        font-family: 'HelloSoffie'; 
+        font-size: 90px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400; 
+        text-align: center; 
+        color: white;
+    } 
+
+    p{
+        font-family: "Felidae";
+        font-size: 40px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+    }
+
+    .main-banner { 
+        background-image: url('img/baner.jpeg'); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        height: 95vh;
+    }
+
+    .text-date{
+        width: 500px; /* Увеличиваем ширину для планшетов */
+    }
+
+    .container-invation{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px; /* Увеличиваем расстояние между элементами */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .invation-title{
+        padding-top: 30px;
+        font-family: 'HelloSoffie'; 
+        font-size: 90px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .container-invitation-text{
+        width: 80%; /* Увеличиваем ширину для планшетов */
+    }
+
+    .container-invation-text p{
+        font-family: "Felidae";
+        font-size: 26px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .confirmation p{
+        font-family: "Felidae";
+        font-size: 24px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        line-height: 30px; /* Увеличиваем межстрочный интервал */
+        text-align: center;
+        color: black;
+    }
+
+    .location{
+        margin-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .image-container{
+        margin-top: 55px;
+        background-image: url(img/location.jpeg);
+        background-size: cover;
+        background-position:50%;
+        width: 100%;
+        height: 300px; /* Увеличиваем высоту для планшетов */
+    }
+    .container-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;    
+    }
+    .container-flex p {
+        font-family: "Felidae";
+        font-size: 26px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+    .container-flex span{
+        font-family: "Felidae";
+        font-size: 36px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+    .wrapper-time{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timing{
+        background-image: url(img/timing.jpeg);
+        height: 250px; /* Увеличиваем высоту для планшетов */
+    }
+
+    .container-dresscode-text{
+        width: 600px; /* Увеличиваем ширину для планшетов */
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .container-dresscode-text p{
+        font-family: "Felidae";
+        font-size: 24px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .wrapper-dresscode{
+        gap: 20px; /* Увеличиваем расстояние между элементами */
+    }
+    .dresscode-title{
+        padding-top: 17px;
+        font-family: "Felidae";
+        font-size: 40px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .container-circle {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px; /* Увеличиваем расстояние между элементами */
+        align-items: center;
+        justify-content: center;
+    }
+    .circle {
+        width: 80px; /* Увеличиваем размер кругов для планшетов */
+        height: 80px; /* Увеличиваем размер кругов для планшетов */
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    .light-blue {
+        background-image: url('img/light-blue.jpeg');
+    }
+    .pink {
+        background-image: url('img/pink.jpeg');
+    }
+    .beige {
+        background-image: url('img/beige.jpeg');
+    }
+    .light-purple {
+        background-image: url('img/light-purple.jpeg');
+    }
+    .silver {
+        background-image: url('img/silver.jpeg');
+    }
+    .black {
+        background-image: url('img/black.jpeg');
+    }
+
+    .details{
+        padding-top: 30px;
+    }
+    .container-details{
+        gap: 20px; /* Увеличиваем расстояние между элементами */
+    }
+
+    .wedding-button {
+        margin-top: 15px;
+        display: inline-block;
+        padding: 15px 25px; /* Немного увеличиваем padding */
+        font-size: 18px; /* Увеличиваем размер шрифта для планшетов */
+        font-weight: bold;
+        font-family: "Felidae";
+        color: #fff;
+        background-color: #f28574; /* Цвет кнопки */
+        border: none;
+        border-radius: 30px; /* Закругленные углы */
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .wedding-button:hover {
+        background-color: #f28574; /* Цвет при наведении */
+        transform: scale(1.05);
+    }
+}
+
+/* Стили для настольной версии */
+/* Стили для настольной версии */
+@media (min-width: 1025px) {
+    .container {
+        width: 100%;
+        gap: 50px; /* Делаем расстояние между элементами умеренным */
+        height: auto; /* Разрешаем контейнеру адаптироваться по высоте */
+    }
+    .text-name {
+        padding-top: 100px;
+    }
+    h1 { 
+        padding-top: 0;
+        font-family: 'HelloSoffie'; 
+        font-size: 140px; /* Сделаем заголовок чуть меньше для гармонии */
+        font-weight: 400; 
+        text-align: center; /* Текст выровнен по центру */
+        color: black; /* Черный цвет для заголовка */
+    } 
+
+    p {
+        font-family: "Felidae";
+        font-size: 24px; /* Поддерживаем универсальный размер шрифта для настольных устройств */
+        font-weight: 400; /* Возвращаем стандартный вес шрифта */
+        text-align: left; /* Текст выровнен по левому краю */
+        color: #555; /* Тёмно-серый цвет */
+    }
+
+    .main-banner { 
+        background-image: url('img/bg.jpeg');      
+        background-size: cover; 
+        height: 80vh; /* Уменьшаем высоту баннера для настольных устройств */
+        width: 100%;
+        position: relative;
+    }
+
+    .text-date {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Центрируем снизу */
+    }
+
+    .container-invation {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Для лучшей адаптивности */
+        flex-direction: column;
+        gap: 40px; /* Делаем расстояние между элементами лёгким */
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .invation-title {
+        padding-top: 0;
+        font-family: 'HelloSoffie'; 
+        font-size: 100px; /* Чуть уменьшаем заголовок для гармонии */
+        font-weight: 400;
+        text-align: left;
+        color: black;
+    }
+
+    .container-invitation-text {
+        width: 70%; /* Ограничиваем ширину текста */
+    }
+
+    .container-invation-text p {
+        font-family: "Felidae";
+        font-size: 20px; /* Поддерживаем размер шрифта для параграфов */
+        font-weight: 400;
+        text-align: left;
+        color: black;
+    }
+
+    .confirmation p {
+        font-family: "Felidae";
+        font-size: 18px; /* Уменьшаем шрифт для дополнительного текста */
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        color: black;
+    }
+
+    .location {
+        margin-top: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .image-container {
+        margin-top: 55px;
+        background-image: url(img/location.jpeg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 400px; /* Увеличиваем высоту для настольных устройств */
+    }
+
+    .container-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container-flex p {
+        font-family: "Felidae";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+
+    .container-flex span {
+        font-family: "Felidae";
+        font-size: 80px; /* Уменьшаем размер шрифта для более гармоничного вида */
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        color: black;
+    }
+
+    .wrapper-time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Выстраиваем блоки горизонтально */
+        gap: 15px;
+    }
+
+    .timing {
+        background-image: url(img/timing.jpeg);
+        height: 300px; /* Увеличиваем высоту для настольных устройств */
+    }
+
+    .container-dresscode-text {
+        width: 80%; /* Делаем ширину чуть меньше для более удобного чтения */
+        padding-left: 10%; 
+        padding-right: 10%;
+    }
+    
+
+    .container-dresscode-text p {
+        font-family: "Felidae";
+        font-size: 24px;
+        font-weight: 400;
+        text-align: left;
+        color: black;
+    }
+
+    .wrapper-dresscode {
+        gap: 20px;
+    }
+
+    .dresscode-title {
+        padding-top: 17px;
+        font-family: "Felidae";
+        font-size: 75px; /* Уменьшаем размер шрифта для более гармоничного вида */
+        font-weight: 400;
+        text-align: center;
+        color: black;
+    }
+
+    .container-circle {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .light-blue {
+        background-image: url('img/light-blue.jpeg');
+    }
+
+    .pink {
+        background-image: url('img/pink.jpeg');
+    }
+
+    .beige {
+        background-image: url('img/beige.jpeg');
+    }
+
+    .light-purple {
+        background-image: url('img/light-purple.jpeg');
+    }
+
+    .silver {
+        background-image: url('img/silver.jpeg');
+    }
+
+    .black {
+        background-image: url('img/black.jpeg');
+    }
+
+    .details {
+        padding-top: 30px;
+    }
+
+    .container-details {
+        gap: 20px;
+    }
+
+    .wedding-button {
+        margin-top: 30px;
+        display: inline-block;
+        padding: 20px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Felidae";
+        color: #fff;
+        background-color: #f28574;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .wedding-button:hover {
+        background-color: #916388;
+        transform: scale(1.05);
+    }
 }
